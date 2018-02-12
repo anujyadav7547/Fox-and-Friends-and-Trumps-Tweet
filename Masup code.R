@@ -1,13 +1,5 @@
 install.packages("timeSeries")
-devtools::install_github("kbenoit/spacyr", build_vignettes = FALSE)
-library(devtools)
 library(tm)
-install_github("kasperwelbers/RNewsflow")
-install.packages("spacyr")
-install.packages("RTextTools")
-library(RNewsflow)
-library("spacyr")
-spacy_initialize()
 library(timeSeries)
 
 setwd("E:/Tutorial/Fox and Friends and Trumps Tweet/Fox and Friends and Trumps Tweet")
@@ -124,8 +116,6 @@ ts<- as.data.frame(ts)
 
 colnames(ts) <- "TimeSeries"
 ts$TimeSeries <- as.POSIXlt(ts$TimeSeries, tz="EST")
-
-colnames(MergedFile) <- c("TimeSeries", "BroadcastTime","TweetTime","Transcript" ,"Tweet","RTCount","IsRetweet")
 
 ts$BroadcastTime <- ""
 ts$Transcript<- ""
